@@ -9,14 +9,13 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'Advent Pro', sans-serif;
-    background-color: black;
+    background-color: rgb(59, 59, 59);
     color: #fff;
 
 }
 
 h1 {
     text-align: center;
-    font-size: 72px;
     font-weight: 400;
     letter-spacing: 6px;
     animation: flicker 1.5s infinite alternate;
@@ -52,36 +51,26 @@ h1 {
 }
 
 h3 {
-    font-weight: 300;
-    text-shadow:
-        0 0 7px #fff,
-        0 0 10px #fff,
-        0 0 21px #fff,
-        0 0 42px #fff,
-        0 0 82px #fff,
-        0 0 92px #fff,
-        0 0 102px #fff,
-        0 0 151px #fff;
-}
-
-label {
-    font-size: 24px;
+    font-weight: 400;
     letter-spacing: 5px;
-    margin: 0;
-    padding: 0;
+    text-shadow:
+        0 0 15px #fff,
+        0 0 30px #fff,
+        0 0 41px #fff,
+        0 0 52px #fff,
+        0 0 82px #fff,
+        0 0 120px #fff,
+        0 0 152px #fff,
+        0 0 200px #fff;
 }
 
 button{
-    width: 200px;
-    height: 200px;
     border: 2px solid #fff;
     border-radius: 8px;
     font-family: 'Advent Pro', sans-serif;
-    font-size: 18px;
-    letter-spacing: 2px;
-    background-color: rgb(51, 51, 51);
+    letter-spacing: 3px;
+    background-color: rgba(230, 219, 128, 0.397);
     color: lightgrey;
-    margin: 30px;
     border-color: #fff;
     box-shadow: 
         0 0 5px #fff,
@@ -124,4 +113,123 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+@media only screen and (max-width: 380px) {
+    h1 {
+        font-size: 48px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    button {
+        width: 80px;
+        height: 80px;
+        font-size: 8px;
+        margin: 20px;
+    }
+}
+
+@media only screen and (min-width: 380px) {
+    h1 {
+        font-size: 52px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    button {
+        width: 100px;
+        height: 100px;
+        font-size: 9px;
+        margin: 22px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    h1 {
+        font-size: 56px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    button {
+        width: 120px;
+        height: 120px;
+        font-size: 10px;
+        margin: 25px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    h1 {
+        font-size: 60px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    button {
+        width: 140px;
+        height: 140px;
+        font-size: 12px;
+        margin: 27px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    h1 {
+        font-size: 64px;
+    }
+
+    h3 {
+        font-size: 26px;
+    }
+
+    button {
+        width: 160px;
+        height: 160px;
+        font-size: 14px;
+        margin: 30px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    h1 {
+        font-size: 68px;
+    }
+
+    h3 {
+        font-size: 28px;
+    }
+
+    button {
+        width: 180px;
+        height: 180px;
+        font-size: 16px;
+        margin: 32px;
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+    h1 {
+        font-size: 72px;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    button {
+        width: 200px;
+        height: 200px;
+        font-size: 18px;
+        margin: 35px;
+    }
 }
