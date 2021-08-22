@@ -13,48 +13,48 @@ const sampler = new Sampler(
     { C2, C3, C4, C5, C6, C7, C8, C9 },
     {
         onload: () => {
-            document.querySelector(".kick").removeAttribute("disabled");
-            document.querySelector(".snare").removeAttribute("disabled");
-            document.querySelector(".cymbal").removeAttribute("disabled");
-            document.querySelector(".ohat").removeAttribute("disabled");
-            document.querySelector(".chat").removeAttribute("disabled");
-            document.querySelector(".shaker").removeAttribute("disabled");
-            document.querySelector(".triangle").removeAttribute("disabled");
-            document.querySelector(".clap").removeAttribute("disabled");
+            document.querySelector(".tone-kick").removeAttribute("disabled");
+            document.querySelector(".tone-snare").removeAttribute("disabled");
+            document.querySelector(".tone-cymbal").removeAttribute("disabled");
+            document.querySelector(".tone-ohat").removeAttribute("disabled");
+            document.querySelector(".tone-chat").removeAttribute("disabled");
+            document.querySelector(".tone-shaker").removeAttribute("disabled");
+            document.querySelector(".tone-triangle").removeAttribute("disabled");
+            document.querySelector(".tone-clap").removeAttribute("disabled");
         }
     }
 ).toDestination();
 
 // Tone Sampler Triggers - click
-document.querySelector(".kick").addEventListener("click", () => {
+document.querySelector(".tone-kick").addEventListener("click", () => {
     sampler.triggerAttack("C2");
 });
 
-document.querySelector(".snare").addEventListener("click", () => {
+document.querySelector(".tone-snare").addEventListener("click", () => {
     sampler.triggerAttack("C3");
 })
 
-document.querySelector(".cymbal").addEventListener("click", () => {
+document.querySelector(".tone-cymbal").addEventListener("click", () => {
     sampler.triggerAttack("C4");
 })
 
-document.querySelector(".ohat").addEventListener("click", () => {
+document.querySelector(".tone-ohat").addEventListener("click", () => {
     sampler.triggerAttack("C5");
 })
 
-document.querySelector(".chat").addEventListener("click", () => {
+document.querySelector(".tone-chat").addEventListener("click", () => {
     sampler.triggerAttack("C6");
 })
 
-document.querySelector(".shaker").addEventListener("click", () => {
+document.querySelector(".tone-shaker").addEventListener("click", () => {
     sampler.triggerAttack("C7");
 })
 
-document.querySelector(".triangle").addEventListener("click", () => {
+document.querySelector(".tone-triangle").addEventListener("click", () => {
     sampler.triggerAttack("C8");
 })
 
-document.querySelector(".clap").addEventListener("click", () => {
+document.querySelector(".tone-clap").addEventListener("click", () => {
     sampler.triggerAttack("C9");
 })
 
