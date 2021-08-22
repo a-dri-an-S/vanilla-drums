@@ -25,11 +25,10 @@ const sampler = new Sampler(
     }
 ).toDestination();
 
-// Tone Drum Triggers - Button Click
+// Tone Sampler Triggers - click
 document.querySelector(".kick").addEventListener("click", () => {
     sampler.triggerAttack("C2");
 });
-
 
 document.querySelector(".snare").addEventListener("click", () => {
     sampler.triggerAttack("C3");
@@ -58,3 +57,46 @@ document.querySelector(".triangle").addEventListener("click", () => {
 document.querySelector(".clap").addEventListener("click", () => {
     sampler.triggerAttack("C9");
 })
+
+// Tone Sampler Triggers - keydown
+document.querySelector("body").addEventListener("keypress", (e) => {
+    if (e.key === "a") {
+        sampler.triggerAttack("C2");
+    }
+});
+
+document.querySelector("body").addEventListener("keypress", (e) => {
+    if (e.key === "s") {
+        sampler.triggerAttack("C3");
+    }
+});
+document.querySelector("body").addEventListener("keypress", (e) => {
+    if (e.key === "d") {
+        sampler.triggerAttack("C4");
+    }
+});
+document.querySelector("body").addEventListener("keypress", (e) => {
+    if (e.key === "f") {
+        sampler.triggerAttack("C5");
+    }
+});
+document.querySelector("body").addEventListener("keypress", (e) => {
+    if (e.key === "q") {
+        sampler.triggerAttack("C6");
+    }
+});
+document.querySelector("body").addEventListener("keypress", (e) => {
+    if (e.key === "w") {
+        sampler.triggerAttack("C7");
+    }
+});
+document.querySelector("body").addEventListener("keypress", (e) => {
+    if (e.key === "e") {
+        sampler.triggerAttack("C8");
+    }
+});
+document.querySelector("body").addEventListener("keypress", (e) => {
+    if (e.key === "r") {
+        sampler.triggerAttack("C9");
+    }
+});
