@@ -1,12 +1,14 @@
-import { Sampler, Distortion } from "tone";
-import C2 from '../resources/808 kit/808-kick.wav'
-import C3 from '../resources/808 kit/808-snare.wav'
-import C4 from '../resources/808 kit/808-ohat.wav'
-import C5 from '../resources/808 kit/808-chat.wav'
-import C6 from '../resources/808 kit/808-cymbal.wav'
-import C7 from '../resources/808 kit/808-shaker.wav'
-import C8 from '../resources/808 kit/808-triangle.wav'
-import C9 from '../resources/808 kit/808-clap.wav'
+import { Sampler, Context, setContext } from "tone";
+import C2 from '../resources/808 kit/808-kick.mp3'
+import C3 from '../resources/808 kit/808-snare.mp3'
+import C4 from '../resources/808 kit/808-ohat.mp3'
+import C5 from '../resources/808 kit/808-chat.mp3'
+import C6 from '../resources/808 kit/808-cymbal.mp3'
+import C7 from '../resources/808 kit/808-shaker.mp3'
+import C8 from '../resources/808 kit/808-triangle.mp3'
+import C9 from '../resources/808 kit/808-clap.mp3'
+
+
 
 // Tone Sampler
 const sampler = new Sampler(
@@ -25,32 +27,30 @@ const sampler = new Sampler(
     }
 ).toDestination();
 
-const distortion = new Distortion(3).toDestination()
-sampler.connect(distortion)
 
 // Tone Sampler Triggers - click
-document.querySelector(".tone-kick").addEventListener("click", () => {
+document.querySelector(".tone-kick").addEventListener("mousedown", () => {
     sampler.triggerAttack("C2");
 });
-document.querySelector(".tone-snare").addEventListener("click", () => {
+document.querySelector(".tone-snare").addEventListener("mousedown", () => {
     sampler.triggerAttack("C3");
 })
-document.querySelector(".tone-ohat").addEventListener("click", () => {
+document.querySelector(".tone-ohat").addEventListener("mousedown", () => {
     sampler.triggerAttack("C4");
 })
-document.querySelector(".tone-chat").addEventListener("click", () => {
+document.querySelector(".tone-chat").addEventListener("mousedown", () => {
     sampler.triggerAttack("C5");
 })
-document.querySelector(".tone-cymbal").addEventListener("click", () => {
+document.querySelector(".tone-cymbal").addEventListener("mousedown", () => {
     sampler.triggerAttack("C6");
 })
-document.querySelector(".tone-shaker").addEventListener("click", () => {
+document.querySelector(".tone-shaker").addEventListener("mousedown", () => {
     sampler.triggerAttack("C7");
 })
-document.querySelector(".tone-triangle").addEventListener("click", () => {
+document.querySelector(".tone-triangle").addEventListener("mousedown", () => {
     sampler.triggerAttack("C8");
 })
-document.querySelector(".tone-clap").addEventListener("click", () => {
+document.querySelector(".tone-clap").addEventListener("mousedown", () => {
     sampler.triggerAttack("C9");
 })
 
