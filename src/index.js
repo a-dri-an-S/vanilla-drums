@@ -1,9 +1,9 @@
-import { Sampler } from "tone";
+import { Sampler, Distortion } from "tone";
 import C2 from '../resources/808 kit/808-kick.wav'
 import C3 from '../resources/808 kit/808-snare.wav'
-import C4 from '../resources/808 kit/808-cymbal.wav'
-import C5 from '../resources/808 kit/808-ohat.wav'
-import C6 from '../resources/808 kit/808-chat.wav'
+import C4 from '../resources/808 kit/808-ohat.wav'
+import C5 from '../resources/808 kit/808-chat.wav'
+import C6 from '../resources/808 kit/808-cymbal.wav'
 import C7 from '../resources/808 kit/808-shaker.wav'
 import C8 from '../resources/808 kit/808-triangle.wav'
 import C9 from '../resources/808 kit/808-clap.wav'
@@ -15,9 +15,9 @@ const sampler = new Sampler(
         onload: () => {
             document.querySelector(".tone-kick").removeAttribute("disabled");
             document.querySelector(".tone-snare").removeAttribute("disabled");
-            document.querySelector(".tone-cymbal").removeAttribute("disabled");
-            document.querySelector(".tone-ohat").removeAttribute("disabled");
             document.querySelector(".tone-chat").removeAttribute("disabled");
+            document.querySelector(".tone-ohat").removeAttribute("disabled");
+            document.querySelector(".tone-cymbal").removeAttribute("disabled");
             document.querySelector(".tone-shaker").removeAttribute("disabled");
             document.querySelector(".tone-triangle").removeAttribute("disabled");
             document.querySelector(".tone-clap").removeAttribute("disabled");
@@ -25,35 +25,31 @@ const sampler = new Sampler(
     }
 ).toDestination();
 
+const distortion = new Distortion(3).toDestination()
+sampler.connect(distortion)
+
 // Tone Sampler Triggers - click
 document.querySelector(".tone-kick").addEventListener("click", () => {
     sampler.triggerAttack("C2");
 });
-
 document.querySelector(".tone-snare").addEventListener("click", () => {
     sampler.triggerAttack("C3");
 })
-
-document.querySelector(".tone-cymbal").addEventListener("click", () => {
+document.querySelector(".tone-ohat").addEventListener("click", () => {
     sampler.triggerAttack("C4");
 })
-
-document.querySelector(".tone-ohat").addEventListener("click", () => {
+document.querySelector(".tone-chat").addEventListener("click", () => {
     sampler.triggerAttack("C5");
 })
-
-document.querySelector(".tone-chat").addEventListener("click", () => {
+document.querySelector(".tone-cymbal").addEventListener("click", () => {
     sampler.triggerAttack("C6");
 })
-
 document.querySelector(".tone-shaker").addEventListener("click", () => {
     sampler.triggerAttack("C7");
 })
-
 document.querySelector(".tone-triangle").addEventListener("click", () => {
     sampler.triggerAttack("C8");
 })
-
 document.querySelector(".tone-clap").addEventListener("click", () => {
     sampler.triggerAttack("C9");
 })
@@ -64,7 +60,6 @@ document.querySelector("body").addEventListener("keypress", (e) => {
         sampler.triggerAttack("C2");
     }
 });
-
 document.querySelector("body").addEventListener("keypress", (e) => {
     if (e.key === "s") {
         sampler.triggerAttack("C3");
